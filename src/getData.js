@@ -5,7 +5,7 @@ import classes from './GetData.module.css';
 export const GetColorOptions = (props)=>{
     return props.map((item,pos)=>{
         return (
-            <a href="#"><img className={classes.rightImage} src={item.imageUrl}z></img></a>
+            <a href="#"><img className={classes.rightImage} src={item.imageUrl}></img></a>
         )
     })
 }
