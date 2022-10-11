@@ -1,0 +1,28 @@
+.leftImageDiv{
+    position: relative;
+    margin-top: -60%;
+    height: 10vh;
+    width: 50vw;
+}
+.text{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 28px;
+}
+.image{
+    height: 60vh;
+    width: 60vw;
+}
+.heartbit{
+    animation:xyz 1s infinite;
+}
+@keyframes xyz {
+    0% {scale:1;}
+    25% {scale:1.2;}
+    50% {scale:1.5;}
+    75% {scale:1.2;}
+    100% {scale:1;}
+}

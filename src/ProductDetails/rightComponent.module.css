@@ -1,0 +1,35 @@
+
+.rightButtonDiv {
+    display: inline-block;
+    top: 48%;
+    left: 50%;
+    min-width: 500px;
+    transform: translate(-50%,-50%);
+  }
+
+  .rightImage {
+    width: 5vw;
+    height: 6vh;
+    border: 2px solid transparent;
+    border-radius: 10%;
+    margin: 1px;
+    transition: 0.3s;
+  }
+  .rightImage:hover {
+    scale:1.2;
+    border: 2px solid grey;
+    transition: 0.3s;
+  }
+
+  .btn{
+    margin: 5px;
+    display: inline-block;
+    width: 10vw;
+    min-width: 100px;
+    height: 6vh;
+  }
+  .btn:hover {
+    scale:1.2;
+    border: 2px solid grey;
+    transition: 0.3s;
+  }
