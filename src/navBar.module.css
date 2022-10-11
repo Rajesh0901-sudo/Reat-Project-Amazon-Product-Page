@@ -1,0 +1,17 @@
+.navBar{
+    background-color: rgb(38, 38, 75);
+    color: white;
+    top:0;
+    height: 10vh;
+    position: relative;
+    
+}
+.navBrand {   
+    position: absolute;
+    height:3vh;
+    width: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import navBar from './navBar';
+import leftComponent from './leftCompnent';
+import rightComponent from './rightComponent';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {navBar()}
+      <div className="split left">
+        <div className="centered">
+          <div className="leftImage">{leftComponent()}</div>
+        </div>
+      </div>
+
+      <div className="split right">
+        <div className="centered">     
+          {rightComponent()}
+        </div>
+      </div>
     </div>
   );
 }
