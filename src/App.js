@@ -9,14 +9,17 @@ class App extends React.Component {
   state = {
     productData : ProductData,
     currentLeftImage:'https://imgur.com/iOeUBV7.png',
-    showHeartBit:false
+    showHeartBit:false,
+    currenImagePosition:0,
+    currentFeaturePosition:0
   }
 
   onColoroptionClick = (pos)=>{
     
     const updatedLeftImage = this.state.productData.colorOptions[pos].imageUrl
     this.setState({
-      currentLeftImage:updatedLeftImage
+      currentLeftImage:updatedLeftImage,
+      currenImagePosition:pos
     })
     
   }
@@ -24,12 +27,20 @@ class App extends React.Component {
     console.log(this.state.showHeartBit)
     const updatedShowHeartBit = pos===1?true:false;
     this.setState({
-      showHeartBit:updatedShowHeartBit
+      showHeartBit:updatedShowHeartBit,
+      currentFeaturePosition:updatedShowHeartBit
     })
     console.log(this.state.showHeartBit)
   }
-
+  shouldComponentUpdate(nextProps,nextState){
+    const a = nextState.currenImagePosition === this.state.currenImagePosition
+    const b = nextState.currentFeaturePosition === this.state.currentFeaturePosition
+      if(a&b)
+        return false;
+      return true;
+  }
   render(){  
+    console.log("Rerendered")
     return (
       <div className="App">
         {navBar()}
